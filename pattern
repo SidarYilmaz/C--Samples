@@ -1,0 +1,127 @@
+#include <stdio.h>
+
+int main(){
+    int a;
+    while(1){
+        printf("Bir 8 den buyuk bir cift sayi giriniz: ");
+        scanf("%d", &a);
+        if(a>8 && a%2==0){
+            break;
+        }else{
+            printf("Bu 8 den buyuk bir cift sayi degil.\n");
+        }
+    }
+    
+    int bosluk = a/2;
+    int bosluk2 = (a/2)-2;
+
+    for(int i = bosluk; i>0; i--){
+        printf("/");
+    }
+
+    for(int i = a; i>0; i--){
+        printf("0");
+    }
+
+    for(int i = bosluk; i>0; i--){
+        printf("\\");
+    }
+
+    printf("\n");
+
+    int b = 2;
+
+    for(int i = bosluk-1; i>0; i--){
+        for(int j = 0; j < i; j++){
+            printf("/");
+        }
+        printf("0");
+        for(int i = bosluk2; i>0; i--){
+            printf(" ");
+        }
+        printf("0");
+        for(int i = b; i>0; i--){
+            printf(" ");
+        }
+        b += 2;
+        printf("0");
+        for(int i = bosluk2; i>0; i--){
+            printf(" ");
+        }
+        printf("0");
+        for(int j = 0; j < i; j++){
+            printf("\\");
+        }
+        printf("\n");
+    }
+
+    for(int i = bosluk; i>0; i--){
+        printf("0");
+    }
+    for(int i = bosluk-1; i>0; i--){
+        printf(" ");
+    }
+    printf("/\\");
+    for(int i = bosluk-1; i>0; i--){
+        printf(" ");
+    }
+    for(int i = bosluk; i>0; i--){
+        printf("0");
+    }
+    
+    printf("\n");
+
+    for(int i = bosluk; i>0; i--){
+        printf("0");
+    }
+    for(int i = bosluk-1; i>0; i--){
+        printf(" ");
+    }
+    printf("\\/");
+    for(int i = bosluk-1; i>0; i--){
+        printf(" ");
+    }
+    for(int i = bosluk; i>0; i--){
+        printf("0");
+    }
+
+    printf("\n");
+
+    b -= 2;
+
+    for(int i = bosluk-1; i>0; i--){
+        for(int j = bosluk; j > i; j--){
+            printf("\\");
+        }
+        for(int i = bosluk; i>0; i--){
+            printf("0");
+        }
+        for(int i = b; i>0; i--){
+            printf(" ");
+        }
+        b -= 2;
+        for(int i = bosluk; i>0; i--){
+            printf("0");
+        }
+        for(int j = bosluk; j > i; j--){
+            printf("/");
+        }
+        printf("\n");
+    }
+
+    for(int i = bosluk; i>0; i--){
+        printf("\\");
+    }
+
+    for(int i = a; i>0; i--){
+        printf("0");
+    }
+
+    for(int i = bosluk; i>0; i--){
+        printf("/");
+    }
+
+    printf("\n");
+
+    return 0;
+}
